@@ -199,9 +199,20 @@ echo.
 echo =================  Download Info =================
 echo                wait for download...
 timeout 5
-ffmpeg\bin\ffmpeg -i "%URL_TEMP%" -c copy "Download_m3u8\%NAME_TEMP%.mp4"
+ffmpeg\bin\ffmpeg -i "%URL_TEMP%" -c copy "%NAME_TEMP%.mp4"
 
 set /a loopdisplaycount1=loopdisplaycount1+1
+echo.
+echo.
+echo ****************  Download finish  ****************
+echo.
+echo File Name : 
+echo %NAME_TEMP% 
+echo.
+echo ***************************************************
+
+timeout 10
+
 if %loopdisplaycount1%==%downloadnumberloop% (
 echo
 echo.
